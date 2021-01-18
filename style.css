@@ -6,20 +6,94 @@
 }
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgba(31, 31, 31, 1);
+    background-color: black;
 }
+
+.top-section{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    margin-top: 2rem;
+    background-color: rgba(51, 51, 51, 1);
+}
+
+.details{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background-color: rgba(194, 194, 194, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    text-align: center;
+}
+.details-name{
+    font-size: 8rem;
+
+}
+.details-age{
+    font-size: 4rem;
+}
+.contact-btn{
+    padding: 1rem 2rem;
+    font-size: 4rem;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+.contact-btn:hover{
+    color: white;
+    transform: scale(1.1);
+    background-color: black;
+}
+
+.contact-btn:focus{
+    outline: none;
+}
+
+.nanupapa{
+    height: 95%;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 450px) {
+    .top-section{
+        height: 70vh;
+    }
+    .details{
+        line-height: 5rem;
+    }
+    .nanupapa{
+        width: 90%;
+        height: auto;
+    }
+    .details-name{
+        font-size: 5rem;
+    }
+    .details-age{
+        font-size: 3rem;
+    }
+    .contact-btn{
+        padding: 0.5rem 2rem;
+        font-size: 3rem;
+    }
+}
+
+
 .main{
-    padding: 1.5rem;
-    margin: 0 auto;
-    width: 80rem;
-    height: auto;
+    margin-top: 10rem;
+    width: 100%;
+    height: 50rem;
 }
 
 .card{
-    margin-top: 10%;
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 55%;
+    margin:  0 auto;
     transform-style: preserve-3d;
     transition: all 0.9s ease;
 }
@@ -32,14 +106,20 @@ body{
     position: absolute;
     display: block;
     margin: 0 auto;
+    width: 100%;
     background-color: white;
-    width: 80rem;
     height: 40rem;
     border-radius: 0.8rem;
     backface-visibility: hidden;
 }
 .card-back{
     transform: rotateY(180deg);
+}
+
+.adhar{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .seperator{
@@ -91,4 +171,96 @@ body{
 }
 .address, .contact{
     font-weight: 700;
+}
+
+.map-div{
+    position: relative;
+    height: 52rem;
+    width: 100%;
+}
+
+#map{
+    
+    background-color: aliceblue;
+    width: 95%;
+    height: 45rem;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px){
+    .card{
+        width: 95%;
+    }
+    .card-front, .card-back{
+        height: 32rem;
+    }
+
+    .profile, .qr_code{
+        height: 80%;
+    }
+
+    .name{
+        font-size: 2.8rem;
+    }
+    .address, .addy, .contact, .cont{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 450px){
+    .card-front, .card-back{
+        height: 25rem;
+    }
+
+    .profile, .qr_code{
+        height: 70%;
+    }
+
+    .name{
+        font-size: 2.5rem;
+    }
+    .address, .addy, .contact, .cont{
+        font-size: 1.25rem;
+    }
+    .main{
+        height: 35rem;
+    }
+
+}
+
+.google-maps{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s;
+}
+.google-maps:hover{
+    background-color: gray;
+}
+
+.contact-div{
+    line-height: 1.5;
+    margin: 5rem auto;
+    width: 80%;
+    padding: 3rem;
+    border-radius: 8px;
+    height: auto;
+    background-color: aliceblue;
+
+}
+
+.link{
+    text-decoration: none;
+    font-size: 2.5rem;
+    
 }
